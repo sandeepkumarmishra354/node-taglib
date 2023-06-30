@@ -1,0 +1,23 @@
+{
+  "name": "node-taglib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "configure:module": "node-gyp configure",
+    "build:module": "npm run configure:module && node-gyp build",
+    "build:taglib": "chmod +x build-taglib.sh && ./build-taglib.sh",
+    "rebuild:module": "node-gyp rebuild",
+    "clean:module": "node-gyp clean",
+    "clean:taglib": "cd taglib-1.13 && make clean && rm -r _install",
+    "build": "npm run build:taglib && npm run build:module",
+    "example": "node ./_example/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^6.1.0"
+  }
+}
