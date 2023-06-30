@@ -1,0 +1,6 @@
+build
+_install
+# .vscode
+node_modules
+# *.mp3
+_example
